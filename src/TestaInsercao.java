@@ -14,9 +14,8 @@ public class TestaInsercao {
 
         ResultSet rst = stm.getGeneratedKeys();
         while (rst.next()){
-            Integer id = rst.getInt(1)
+            Integer id = rst.getInt(1);
             System.out.println("O ID criado foi: "+id);
-
         }
 
     }
