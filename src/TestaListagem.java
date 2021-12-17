@@ -8,8 +8,8 @@ public class TestaListagem {
         ConnectionFactory criaConexao = new ConnectionFactory();
         Connection connection = criaConexao.recuperarConexao();
 
-        Statement stm = connection.createStatement();
-        stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTTO");
+        PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTTO");
+        stm.execute();
 
         ResultSet rst = stm.getResultSet();
 
